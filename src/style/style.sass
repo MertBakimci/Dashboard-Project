@@ -1,0 +1,315 @@
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+body
+    background-color: #ebebeb
+
+.header
+    position: relative
+    background-color: #fff
+    height: 60px
+    z-index: 5
+    button
+        appearance: none
+        border-color: transparent
+        padding: 0
+        height: 60px
+        cursor: pointer
+        border: none
+        outline: none
+        background-color: transparent
+        svg
+            font-size: 60px
+
+.container
+    position: relative
+    width: 100%
+    height: fit-content
+    min-height: calc(100vh - 60px)
+    padding: 15px 20px
+    @media (max-width:600px) 
+        padding: 10px
+
+.overlay
+    position: fixed
+    width:100%
+    height: 100%
+    background-color:#00000044
+    opacity: 0
+    transition:0.5s ease
+    z-index: 3
+    pointer-events: none
+
+.overlay.active
+    opacity: 1
+    pointer-events: auto
+
+.sidebar
+    top: 0
+    position: absolute
+    width: 18%
+    height: 100%
+    min-height: 100%
+    z-index: 999
+    background-color: #fff
+    left: -100%
+    transition: 0.9s ease
+    @media (max-width: 1000px)
+        width: 80vw
+        top: -60px
+        height: calc(100% + 60px)
+        .person-info 
+            padding-top: 30px !important
+            font-size: 1.5rem
+    .person-info  
+
+        background-color: #6f3fcd
+        color: #fff
+        font-size: clamp(20px,1.5rem,30px)
+        padding: 5px 0 10px 10px
+        h4,h5 
+             font-weight: 400
+        .navbarClose
+            position: absolute
+            top: 5px
+            font-size: 1.5rem
+            padding: 10px
+            right: 5px
+            background-color: black
+            outline: none
+            border: none
+            svg 
+                color: #6f3fcd
+                display: block
+        .person
+            width:40%
+            img
+                width: clamp(100px,100%,200px)
+        .info 
+            margin-top: 20px
+            .name 
+                min-height: 125px 
+            .profile
+                margin-bottom: auto
+                button
+                    border: 1px solid #fff
+                    outline: none
+                    background-color: transparent
+                    color: white
+                    width: 100%
+                    padding: 15px 0
+                    border-radius: 100px
+    .links 
+        gap: 10px
+        width: 100%
+        .link 
+            width: 100%
+            padding: 15px 0 15px 20px
+            font-size: 1.2rem
+            transition: 0.5s ease
+            cursor: pointer
+            p
+                color: #53535399
+                transition: 0.5s ease
+            .icon
+                color: #444444
+                transition: 0.5s ease
+                width: 45px
+                display: flex
+                align-items: center
+                aspect-ratio: 1/1
+                justify-content: center
+                border: 1px solid #000
+                padding: 10px
+                border-radius: 50%
+               
+            &:hover 
+                background-color: #b3b3b38a
+                p
+                    color: #000
+                .icon 
+                    color: #000
+
+.sidebar.active
+    left: 0%
+ 
+
+.content
+    margin: 0 0 0 auto
+    transform-origin: right
+    width: 100%
+    height: 100%
+    max-width: 1920px
+    transition: 0.9s ease
+    .cards
+        flex-wrap: wrap
+        .card
+            border-radius: 15px
+            box-shadow: #f3e9ffb6 0px 8px 24px
+            padding: 15px 20px
+            align-self: normal
+            width: 49%
+            flex-grow: 1
+            height: 300px
+            min-width: 40%
+            background-color: #fff
+            &:nth-child(1)
+                background-color: #f3e9ff
+                @media (max-width:600px) 
+                span
+                    font-size: 0.7rem
+                .wallet
+                    color: #00000093
+                    h3,h4
+                        font-weight: 500
+
+                .wallet-balance
+                    h5
+                        font-weight: 500
+                .balance
+                    h1
+                        font-size: 3.5rem
+                        font-weight: 400
+                       
+                    svg
+                        display: block
+                        margin: auto
+                        font-size: 3rem
+                     
+
+                .specifications
+                    
+                    width: 100%
+                    .spec
+                        padding: 10px
+                        span
+                            font-size: .8rem
+                        @media (max-width:500px) 
+                            span
+                                white-space: nowrap
+                            .icon
+                                padding: 10px !important
+                                
+                                i
+                                    font-size:1.5rem !important
+                        span
+                            font-weight: 600
+                        .icon
+                            display: flex
+                            align-items: center
+                            justify-content: center
+                            width: fit-content
+                            padding: 10px
+                            aspect-ratio: 1/1
+                            border-radius: 50%
+                           
+                            background-color: #6f3fcd
+                            
+                            i
+                                transform: rotate(30deg)
+                                color: #fff
+                                display: block
+                                font-size: 2rem
+            &:nth-child(2)
+                h3
+                    color: #00000093
+                    font-weight: 500
+                button
+                    outline: none
+                    border: none
+                    appearance: none
+                    border-radius: 0
+                    cursor: pointer 
+                    width:60%
+                    color: #fff
+                    background-color: #6f3fcd
+                    padding:10px 15px
+                    p
+                        font-weight: 100
+
+    .slider
+        gap: 10px
+        background-color: #fff
+        padding: 30px
+        white-space: nowrap
+        i 
+            color: #a286d79f
+        @media (max-width: 1000px)
+            flex-direction: column
+            gap: 10px
+            .payments
+                border-bottom: 1px solid #00000034
+                padding: 15px 0
+                padding-top: 0
+                .mobile-buttons
+                    margin-left: auto
+                    i
+                        color: #a286d79f
+                        font-size: 1.5rem
+            .slider-wrapper
+                width: 100% !important
+                .slides
+                    width: 100% 
+        
+
+        h4
+            color: #00000093
+
+        .slider-wrapper
+            width:80%
+            margin-left: auto
+            position: relative
+            gap: 5px
+            @media (max-width: 1000px)
+                justify-content: center !important
+            i
+                color: #a286d79f
+                font-size:1.5rem
+                cursor: pointer
+            .slides
+                width:90%
+                flex-shrink: 0
+                scroll-behavior: smooth
+                transition-duration: 1000ms
+                overflow-x: hidden
+                .slide
+                    transition: 0.5s ease
+                    width: calc(100% / 4)
+                    display: flex
+                    flex-shrink: 0
+                    align-items: center
+                    flex-direction: column  
+                    h5
+                        white-space: nowrap
+                        font-size: auto
+                    i
+                        color: #000
+                        font-size:2.5rem
+                    @media (min-width: 1920px) 
+                        width: calc(100% / 5) !important
+                    @media (max-width: 1280px) 
+                        width: calc(100% / 3) !important
+                    @media (max-width: 1000px) 
+                        width: calc(100% / 2) !important
+                    @media (max-width:600px)
+                        width: calc(100% / 1) !important
+
+
+.content.sidebar-active
+  
+    width: calc(100% - 19%)
+
+    
+    @media (max-width: 1000px)
+        width: 100%
+        transform: none
+
+
+
+
+
+
+
+
