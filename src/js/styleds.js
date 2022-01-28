@@ -12,7 +12,7 @@ align-items: center;
 justify-content: space-between;
 gap: 0px 0px;
 grid-template-areas: ". . . . . .";
-height: 100px;
+height: 120px;
             .image {
                 border-radius: 15px 0 0 15px;
                 width: 100%;
@@ -45,14 +45,14 @@ height: 100px;
                 color: white;
                 text-transform: uppercase;
                 white-space: nowrap;
-                padding: 10px 15px;
+                padding: 5px 10px;
                 background-color: ${(props) => props.stateColor};
 }
             input
               {  
                 
-                  width: 30px;
-                height: 30px;
+                  width: 25px;
+                height: 25px;
                 border: 1px solid #9999;
                 border-radius: 50px !important;}
 

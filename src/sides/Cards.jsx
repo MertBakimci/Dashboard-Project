@@ -16,7 +16,7 @@ function Cards() {
         <div className="wallet-balance m-auto flex flex-col g-10 ">
           <h5 className="text-center">{userData?.wallet.balance.title}</h5>
           <div className="balance w-100 flex justify-center align-center">
-            <BiDollar />
+            <i className="fas fa-dollar-sign"></i>
             <h1>{userData?.wallet.balance.value}</h1>
           </div>
         </div>

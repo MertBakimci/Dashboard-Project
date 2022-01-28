@@ -25,7 +25,7 @@ export default function Sidebar() {
         <div className={`sidebar flex flex-col justify-start g-20 ${sOpen ? 'active' :""}`}>
            
             {console.log(userData)}
-            <div className="person-info flex g-10 align-start justify-start">
+            <div className="person-info flex align-start">
             {ifSmall === true && <button className="navbarClose" onClick={() => setSOpen(false)}><FontAwesomeIcon icon={faTimes} /></button>}
                 <div className="person">
                     <img src="https://i.ibb.co/swkR93p/bramdejager-600x600.png" alt="" />
